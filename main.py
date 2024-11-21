@@ -30,6 +30,11 @@ def main():
         for updatable in updatable_group:
             updatable.update(dt)
 
+        for asteroid in asteroid_group:
+            if asteroid.is_colliding(player):
+                print("Game over!")
+                exit()
+
         screen.fill("black")
 
         for drawble in drawble_group:
