@@ -5,6 +5,7 @@ from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
 
+
 def main():
     print("Starting asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -42,7 +43,7 @@ def main():
 
             for shot in shot_group:
                 if asteroid.is_colliding(shot):
-                    asteroid.kill()
+                    asteroid.split()
 
         screen.fill("black")
 
